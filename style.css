@@ -1,0 +1,530 @@
+/*LOGO*/
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat",sans-serif;
+    background-image: linear-gradient(to right, rgb(61, 1, 61) , darkblue);
+    
+  }
+  
+  .middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  .text{
+    position: absolute;
+    top: 10%;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 14px;
+  }
+  
+  .text::before,.text::after{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .text::before{
+    color: #ff00c1;
+    animation: GUESS 3s infinite;
+  }
+  
+  .text::after{
+    color: #3498db;
+    animation: GUESS 2s infinite;
+  }
+  
+  @keyframes GUESS {
+    0%{
+      left: -2px;
+      top: -2px;
+    }
+    25%{
+      left: 2px;
+      top: 0px;
+    }
+    50%{
+      left: -1px;
+      top: 2px;
+    }
+    75%{
+      left: 1px;
+      top: -1px;
+    }
+    100%{
+      left: 0px;
+      top: -2px;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+/*BUTTONS*/
+.btn-group {
+  margin: 13% 36%;
+  text-align: center;
+}
+
+.btn-group .button {
+  background-image: linear-gradient(to right, rgb(18, 38, 189) , rgb(107, 129, 255));
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.btn-group .button:not(:last-child) {
+  border-bottom: none; 
+}
+
+.btn-group .button:hover {
+  background-image: linear-gradient(to right, rgb(118, 99, 196) , rgb(192, 200, 248));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*LEVELS*/
+
+.level {
+  position: relative;
+  margin: 80px 0px;
+  text-align: center;
+}
+
+.level button {
+  background-image: linear-gradient(to right, rgb(18, 38, 189) , rgb(107, 129, 255));
+  font-size: large;
+  color: white;
+  padding: 25px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100px;
+  margin-top: 20px;
+  margin-right: 5px;
+  border-radius: 4px;
+  border: none;
+
+}
+
+
+
+.level .button:hover {
+  background-image: linear-gradient(to right, rgb(118, 99, 196) , rgb(192, 200, 248));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*BACK*/
+.back {
+  position: absolute;
+  margin-top: -680px;
+  margin-left: 1400px;
+  background-image: linear-gradient(to right, rgb(18, 38, 189) , rgb(107, 129, 255));
+  font-size: large;
+  width: 100px;
+  color: #fff;
+  outline: none;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  border: none;
+
+}
+
+
+
+.back:hover {
+  background-image: linear-gradient(to right, rgb(118, 99, 196) , rgb(192, 200, 248));
+}
+
+
+
+
+
+
+
+
+
+
+/*TICK*/
+#tick-mark {
+  position: relative;
+  display: inline-block;
+  left: 48%;
+  top: 100px;
+  width: 200px;
+  height: 200px;
+
+
+
+}
+
+#tick-mark::before {
+  background-image: linear-gradient(to right, rgb(200, 0, 255) , rgb(107, 129, 255));
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 50%;
+  width: 40px;
+  background-color: #ffffff;
+  content: "";
+  transform: translateX(10px) rotate(-45deg);
+  transform-origin: left bottom;
+}
+
+#tick-mark::after {
+  background-image: linear-gradient(to right, rgb(200, 0, 255) , rgb(107, 129, 255));
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  background-color: #ffffff;
+  content: "";
+  transform: translateX(10px) rotate(-45deg);
+  transform-origin: left bottom;
+}
+
+
+
+
+
+
+/*NEXT LEVEL*/
+.nextbutton {
+
+  text-align: center;
+  margin: 250px 660px;
+}
+
+.next {
+  background-image: linear-gradient(to right, rgb(18, 38, 189) , rgb(107, 129, 255));
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.next:not(:last-child) {
+  border-bottom: none; 
+}
+
+.next:hover {
+  background-image: linear-gradient(to right, rgb(118, 99, 196) , rgb(192, 200, 248));
+}
+
+
+
+
+/*CORRECT TYPE*/
+.correct {
+  color: #fff;
+  font-size: 60px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 300px;
+  margin: -410px 650px;
+  
+}
+
+
+
+
+
+
+
+
+/*GAME CONTAINER*/
+.container {
+  position: absolute ;
+  height: 700px;
+  margin: 10px 500px;
+}
+
+/*GAME BACK*/
+.container2 {
+  position: relative;
+  width: 200px;
+  margin-top: 30px;
+  margin-left: 1100px;
+  padding: 30px 100px;
+}
+
+.gameback {
+  background-image: linear-gradient(to right, rgb(18, 38, 189) , rgb(107, 129, 255));
+  font-size: large;
+  width: 100px;
+  color: #fff;
+  margin-left: 200px;
+  margin-top: -300px;
+  padding: 20px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  border: none;
+}
+.gameback:hover {
+  background-image: linear-gradient(to right, rgb(118, 99, 196) , rgb(192, 200, 248));
+}
+
+
+
+
+
+
+/*GAME BODY*/
+body {
+  background-color: rgb(10, 0, 30);
+}
+
+
+
+
+
+
+
+
+/*NAVBAR LEVELNO*/
+.levelno {
+  position: relative;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(201, 199, 199);
+  height: 40px;
+  padding-top: 10px;
+  background-color: #2c265b;
+}
+
+
+
+
+
+/*QN CONTAINER*/
+.qn {
+  position: relative;
+  height: 400px;
+  padding-top: 150px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 50px;
+  font-weight: 100;
+  color: white;
+  background-image: linear-gradient(to right, rgb(12, 0, 41) , rgb(0, 0, 0));
+
+}
+
+
+
+
+
+/*ANSWER TEXT*/
+.anstext {
+  position: relative;
+  border: 1px solid #170931;
+  color: white;
+  padding: 15px 32px;
+  font-size: 20px;
+  cursor: pointer;
+  width: 250px;
+  background-color: #2c265b;
+  outline: none;
+}
+
+.anstext:hover {
+  background-image: linear-gradient(to right, rgb(0, 0, 0) ,rgb(118, 99, 196));
+}
+
+
+
+
+/*GAME ENTER BUTTON*/
+.enter {
+  position: relative;
+  color: white;
+  padding: 15px 32px;
+  font-size: 20px;
+  cursor: pointer;
+  bottom: 55px;
+  margin-left: 315px;
+  width: 210px;
+  border: 1px solid #170931;
+  background-color: #2c265b;
+}
+
+.enter:hover {
+  background-image: linear-gradient(to right, rgb(0, 0, 0) ,rgb(118, 99, 196));
+}
+
+
+
+
+
+
+
+/*ABOUT*/
+.about {
+    margin-top: 200px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    
+}
+
+
+
+/*ABOUT BACK*/
+.aboutback {
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(18, 38, 189) , rgb(107, 129, 255));
+    font-size: large;
+    width: 100px;
+    color: #fff;
+    margin-left: 650px;
+    margin-top: -280px;
+    padding: 20px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    border: none;
+    text-align: center;
+  }
+
+  .aboutback:hover {
+    background-image: linear-gradient(to right, rgb(118, 99, 196) , rgb(192, 200, 248));
+  }
+
+  
+
+
+
+
+
+/*CONTACT*/
+.contact {
+    margin-top: 200px;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgb(61, 1, 61) , darkblue);
+    color: white;
+    text-align: center;
+    
+}
+
+
+
+
+
+.contactback {
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(18, 38, 189) , rgb(107, 129, 255));
+    font-size: large;
+    width: 100px;
+    color: #fff;
+    margin-left: 1400px;
+    margin-top: -260px;
+    padding: 20px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    border: none;
+    text-align: center;
+  }
+
+  .contactback:hover {
+    background-image: linear-gradient(to right, rgb(118, 99, 196) , rgb(192, 200, 248));
+  }
+  
+  
+  
+
+
+
+
+/*FOLLOW*/
+.follow {
+    margin-top: 200px;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgb(61, 1, 61) , darkblue);
+    color: white;
+    text-align: center;
+}
+
+
+
+.followback {
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(18, 38, 189) , rgb(107, 129, 255));
+    font-size: large;
+    width: 100px;
+    color: #fff;
+    margin-left: 1400px;
+    margin-top: -260px;
+    padding: 20px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    border: none;
+    text-align: center;
+  }
+
+  .followback:hover {
+    background-image: linear-gradient(to right, rgb(118, 99, 196) , rgb(192, 200, 248));
+  }
+
+
+
